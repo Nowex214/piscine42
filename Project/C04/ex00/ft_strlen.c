@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ehenry <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 12:35:25 by ehenry            #+#    #+#             */
-/*   Updated: 2024/09/09 13:28:32 by ehenry           ###   ########.fr       */
+/*   Created: 2024/09/15 12:34:39 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/15 12:34:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-char	*ftsrcpy(char *dest, char *src)
+int ft_strlen(char *str)
 {
-	int	i;
+    int i;
 
-	i = '0';
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	return(dest);
+    i = 0;
+    while(str[i])
+    {
+        i++;
+    }
+    return(i);
 }
