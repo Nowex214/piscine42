@@ -49,7 +49,7 @@ int main(int ac, char **av)
     {
         mine = ft_atoi(av[1]);
         theirs = ft_atoi(av[1]);
-        printf("mine: %d | theirs %d\n", mine, theirs);
+        printf("mine: %d | theirs: %d\n", mine, theirs);
     }
     return(0);
 }

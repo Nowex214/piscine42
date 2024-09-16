@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 14:35:09 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/16 14:35:09 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/12 18:52:34 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/12 18:52:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void    ft_putchar(char c)
+char    *ft_strcpy(char *s1, char *s2)
 {
-    write(1, &c, 1);
-}
-
-int     ft_strlen(char *str)
-{
-    int i;
-
+    int     i;
     i = 0;
-    while(str[i])
+    while(s2[i] != '\0')
     {
+        s1[i] = s2[i];
         i++;
     }
-    return(i);
+    return(s1);
 }
 
-void    ft_putnbr_base(int nbr, char *base)
+int     main(void)
 {
-    int nb = nbr;
+    char str1[] = "Hello";
+    char str2[] = "world";
 
+    printf("%s\n", str1);
+    ft_strcpy(str1, str2);
+    printf("%s\n", str2);
+    return(0);
 }

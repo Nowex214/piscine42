@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   helloword.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 14:35:09 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/16 14:35:09 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/12 18:47:52 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/12 18:47:52 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_putchar(char c)
+void    ft_hellowolrd(void)
 {
-    write(1, &c, 1);
+    write (1, "Hello World!\n", 13);
 }
 
-int     ft_strlen(char *str)
+int     main()
 {
-    int i;
-
-    i = 0;
-    while(str[i])
-    {
-        i++;
-    }
-    return(i);
-}
-
-void    ft_putnbr_base(int nbr, char *base)
-{
-    int nb = nbr;
-
+    ft_hellowolrd();
+    return(0);
 }

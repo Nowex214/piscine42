@@ -1,36 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   revprint.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 14:35:09 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/16 14:35:09 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/12 12:29:41 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/12 12:29:41 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_putchar(char c)
+char    ft_strlen(char *str)
 {
-    write(1, &c, 1);
-}
+    int     i;
 
-int     ft_strlen(char *str)
-{
-    int i;
-
-    i = 0;
-    while(str[i])
+    while(str[i] != '\0')
     {
         i++;
     }
     return(i);
 }
-
-void    ft_putnbr_base(int nbr, char *base)
+char    *ft_rev_print(char *str)
 {
-    int nb = nbr;
+    int     i;  
 
+    i = ft_strlen(str);
+    i--;
+    while(i >= 0)
+    {
+        write(1, &str[i], 1);
+        i--;
+    }
+    return(str);
+}
+
+int     main()
+{
+    char str[] = "Hello";
+    ft_rev_print(str);
+    return(0);
 }

@@ -1,36 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_strrev.C                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 14:35:09 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/16 14:35:09 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/12 14:23:00 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/12 14:23:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void    ft_putchar(char c)
-{
-    write(1, &c, 1);
-}
 
-int     ft_strlen(char *str)
+char    *ft_strrev(char *str)
 {
     int i;
+    int j;
+    char temp;
 
     i = 0;
-    while(str[i])
+    j = 0;
+
+    while(str[i] != '\0')
     {
         i++;
     }
-    return(i);
+    i--;
+
+    while(j < i)
+    {
+        temp = str[j];
+        str[j] = str[i];
+        str[i] = temp;
+        j++;
+        i--;
+    }
+    return(str);
 }
 
-void    ft_putnbr_base(int nbr, char *base)
-{
-    int nb = nbr;
-
+int main() {
+    char str[] = "Hello, world!";
+    printf("Original: %s\n", str);
+    ft_strrev(str);
+    printf("Reversed: %s\n", str);
+    return 0;
 }

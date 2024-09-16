@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_strlen2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 14:35:09 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/16 14:35:09 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/12 19:02:50 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/12 19:02:50 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void    ft_putchar(char c)
-{
-    write(1, &c, 1);
-}
+#include <stdio.h>
 
 int     ft_strlen(char *str)
 {
-    int i;
-
+    int     i;
+    
     i = 0;
-    while(str[i])
+    while(str[i] != '\0')
     {
         i++;
     }
     return(i);
 }
-
-void    ft_putnbr_base(int nbr, char *base)
+/*
+int     main()
 {
-    int nb = nbr;
-
+    char str1[] = "Hello World!";
+    char str2[] = "L'école 42 c'est trop bien";
+    
+    printf("La longueur de %s est de : %d\n", str1, ft_strlen(str1));
+    printf("La longueur de '%s' est de : %d\n", str2, ft_strlen(str2));
+    return(0);
 }
+*/

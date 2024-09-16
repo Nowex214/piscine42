@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   only_z.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 14:35:09 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/16 14:35:09 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/12 12:06:44 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/12 12:06:44 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_putchar(char c)
+void    ft_onlyz(void)
 {
-    write(1, &c, 1);
+    write(1, "z", 1);
 }
 
-int     ft_strlen(char *str)
+int     main()
 {
-    int i;
-
-    i = 0;
-    while(str[i])
-    {
-        i++;
-    }
-    return(i);
-}
-
-void    ft_putnbr_base(int nbr, char *base)
-{
-    int nb = nbr;
-
+    ft_onlyz();
+    return (0);
 }

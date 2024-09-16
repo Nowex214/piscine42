@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   first_word.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 14:35:09 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/16 14:35:09 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/12 12:42:46 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/12 12:42:46 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,36 @@
 
 void    ft_putchar(char c)
 {
-    write(1, &c, 1);
+    write (1, &c, 1);
 }
 
-int     ft_strlen(char *str)
+void    ft_first_word(char *str)
 {
-    int i;
-
+    int     i;
+    
     i = 0;
-    while(str[i])
+    while(str[i] == 32 || str[i] == 9 || str[i] == 10)
     {
         i++;
     }
-    return(i);
+    while(str[i] != 32 && str[i] != 9 && str[i] != 10)
+    {
+        ft_putchar(str[i]);
+        i++;
+    }
+    ft_putchar('\n');
 }
 
-void    ft_putnbr_base(int nbr, char *base)
+int     main(int argc, int *argv)
 {
-    int nb = nbr;
-
-}
+    if(argc == 2)
+    {
+        ft_first_word(argv[1]);
+        return(0);
+    }
+    else
+    {
+        ft_putchar('\n');
+    }
+    return(0);
+} 

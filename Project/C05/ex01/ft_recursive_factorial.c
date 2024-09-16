@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 14:35:09 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/16 14:35:09 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/16 19:44:53 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/16 19:44:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void    ft_putchar(char c)
+int ft_recursive_factorial(int nb)
 {
-    write(1, &c, 1);
-}
-
-int     ft_strlen(char *str)
-{
-    int i;
-
-    i = 0;
-    while(str[i])
+    if(nb >= 1)
     {
-        i++;
+        return(nb *ft_recursive_factorial(nb -1));
     }
-    return(i);
-}
-
-void    ft_putnbr_base(int nbr, char *base)
-{
-    int nb = nbr;
-
-}
+    else if(nb > 0)
+    {
+        return(0);
+    }
+    else
+    {
+        return(1);
+    }
+} 
