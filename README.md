@@ -1,1 +1,1 @@
-Piscine 42 of Luxembourg at June 2024
+Piscine 42 of Luxembourg at June 2024.
