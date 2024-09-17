@@ -50,10 +50,9 @@ void	ft_print_combn(int n)
 		write(1, "\n", 1);
 	}
 }
-/*
+
 int main(void)
 {
-	ft_print_combn(3); 
+	ft_print_combn(2); 
 	return 0;
 }
-*/

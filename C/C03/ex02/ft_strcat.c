@@ -1,48 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/14 20:20:11 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/14 20:20:11 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/14 19:33:23 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/14 19:33:23 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char    *ft_strncat(char *dest, char *src, unsigned int nb)
+char *ft_strcat(char *dest, char *src)
 {
     int i;
-    unsigned int j;
+    int j;
 
-    i = 0;
-    j = 0;
+    i= 0;
     while(dest[i])
         i++;
     j = 0;
-    while(src[j] && j > nb)
-    {
+    while(src[j]) //copier les caractères de src dans dest.
         dest[i + j] = src[j];
         j++;
-    }
-    dest[i + j] = '\0';
-    return (0);
+    dest[i + j] = '\0'; //ajout du caractères nul pour marquer la fin de la chaine.
+    return(dest);
 }
 /*
-int main(void)
+int main()
 {
-    char dest[50] = "Hello, ";
-    char src[] = "World!";
-    unsigned int nb = 3;
-
+    char dest[5] = "Hello";
+    char src[] = "Helli";
+    
     printf("Avant concaténation : %s\n", dest);
-
-    ft_strncat(dest, src, nb);
-    
+    ft_strcat(dest, src);
     printf("Après concaténation : %s\n", dest);
-    
     return 0;
 }
 */

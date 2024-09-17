@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-char    *ft_strlen(char *str)
+char    *ft_strlen(char *str) //calculer la longueur.
 {
     int i;
     
@@ -29,32 +29,23 @@ char    *ft_strstr(char *str, char *to_find)
     int i;
     int j;
 
-    if(ft_strlen(to_find) < 1)
+    if(ft_strlen(to_find) == 0) // Si la chaine recherché (to_find) est vide, return la chaine d'origine.
     {
         return(str);
     }
     i = 0;
-    while(str[i])
+    while (str[i])
     {
-        j = 0;
-        while(to_find[j])
+        j = 0; 
+        while (str[i + j] == to_find[j]) //compare chaque caractère de (to_find) avec ceux correspondants dans str.
         {
-            if(str[i + j] == to_find[j])
-            {
-                if(to_find[j + 1] != '\0')
-                {
-                    return(str[i]);
-                }
-                else
-                {
-                    break ;
-                }
-            }
+            if (to_find[j + 1] == '\0') //si c'est vrai alors (to_find) a été trouvé dans str.
+                return (&str[i]);
             j++;
         }
         i++;
     }
-    return(0);
+    return (0);
 }
 
 #include <stdio.h>
