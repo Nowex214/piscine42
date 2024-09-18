@@ -32,10 +32,11 @@ int     ft_iteractive_factorial(int nb)
     }
     return(res);
 }
-
+/*
 int main()
 {
     int res = ft_iteractive_factorial(10);
     printf("%d", res);
 }
 // 10! = 1 * 2 * 3 * 4 * 5 * 6 * 7 * 8 * 9 * 10 = 362.880
+*/

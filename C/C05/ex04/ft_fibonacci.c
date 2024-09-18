@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 19:44:53 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/16 19:44:53 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/18 19:57:23 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/18 19:57:23 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdio.h>
 
-int ft_recursive_factorial(int nb)
+int	ft_fibonacci(int index)
 {
-	int	result;
-
-	result = 1;
-	if (nb < 0)
-    {
-        return(0);
-    }
-    if(nb == 0)
-    {
-        return(1);
-    }
-    return(nb * ft_recursive_factorial(nb - 1)); 
+	if (index < 0)
+		return (-1);
+	if (index < 2)
+		return (index);
+	return (ft_fibonacci(index - 2) + ft_fibonacci(index - 1)); //si index est supérieur ou eg à 2, la fonction s'appell pour calculer l'index de F.
 }
 
-/*
 int	main(void)
 {
-	printf("%i", ft_recursive_factorial(7));
+	printf("%i", ft_fibonacci(8));
 }
-*/
