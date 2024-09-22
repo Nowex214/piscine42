@@ -77,9 +77,17 @@ int main(int ac, char **av)
     {
         printf("%d\n", index);
         printf("\t orignal one : $%s$ @ %p\n", structs[index].str, structs[index].str);
-        printf("\t|   copied : $%s$ @ %p\n", structs[index].copy, structs[index].copy);
-		printf("\t|     size : %d\n", structs[index].size);
+        printf("\t copied : $%s$ @ %p\n", structs[index].copy, structs[index].copy);
+		printf("\t size : %d\n", structs[index].size);
         index++;
     }
-    free (index);
+    
+    int i = 0;
+    while (ac > i)
+    {
+        free(structs[i].copy);
+        i++;
+    }
+    free (structs);
+    return (0);
 }
