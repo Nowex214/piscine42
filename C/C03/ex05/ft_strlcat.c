@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ehenry <ehenry@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 20:46:36 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/18 15:27:36 by ehenry           ###   ########.fr       */
+/*   Updated: 2024/09/24 20:07:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int	i;
 
 	src_len = ft_strlen(src);
-	dest_len = ft_sstrlen(dest);
+	dest_len = ft_strlen(dest);
 	if (size <= dest_len)
 		return (src_len + size);
 	i = 0;
@@ -43,7 +43,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }
-/*
+
 int	main(void)
 {
 	char			dest[50] = "Hello";
@@ -58,4 +58,4 @@ int	main(void)
 	printf("Longueur totale de la chaîne : %u\n", result);
 	return (0);
 }
-*/
+
