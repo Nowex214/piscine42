@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ehenry <ehenry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 20:10:05 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/16 20:10:05 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/19 17:42:20 by ehenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_iterative_power(int nb, int power)
 	res = nb;
 	while (power > 1)
 	{
-		res *= nb;//reviens a multiplier nb par lui même ?
+		res *= nb;
 		power--;
 	}
 	if (power == 0)

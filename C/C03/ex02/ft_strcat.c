@@ -3,39 +3,44 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ehenry <ehenry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 19:33:23 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/14 19:33:23 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/18 15:29:04 by ehenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
-    int i;
-    int j;
+	int	i;
+	int	j;
 
-    i= 0;
-    while(dest[i])
-        i++;
-    j = 0;
-    while(src[j]) //copier les caractères de src dans dest.
-        dest[i + j] = src[j];
-        j++;
-    dest[i + j] = '\0'; //ajout du caractères nul pour marquer la fin de la chaine.
-    return(dest);
+	i = 0;
+	j = 0;
+	while (dest[i])
+		i++;
+	while (src[j])
+	{
+		dest[i] = src[j];
+		j++;
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 /*
-int main()
+int	main(void)
 {
-    char dest[5] = "Hello";
-    char src[] = "Helli";
+	char	dest[5] = "Hello";
+	char	src[] = "Helli";
+
+	printf("Avant concaténation : %s\n", dest);
+
+	ft_strcat(dest, src);
     
-    printf("Avant concaténation : %s\n", dest);
-    ft_strcat(dest, src);
-    printf("Après concaténation : %s\n", dest);
-    return 0;
+	printf("Après concaténation : %s\n", dest);
+	return (0);
 }
 */

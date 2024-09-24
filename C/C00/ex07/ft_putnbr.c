@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ehenry <ehenry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 20:03:58 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/09 20:03:58 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/23 11:43:36 by ehenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-int int_length(int n)
+int	int_length(int n)
 {
-	int length;
+	int	length;
 
 	length = 0;
 	while (n > 0)
@@ -30,9 +30,9 @@ int int_length(int n)
 	return (length);
 }
 
-int get_digit(int n, int digit)
+int	get_digit(int n, int digit)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < digit)
@@ -43,10 +43,10 @@ int get_digit(int n, int digit)
 	return (n % 10);
 }
 
-void ft_putnbr(int nb)
+void	ft_putnbr(int nb)
 {
-	int length;
-	int i;
+	int	length;
+	int	i;
 
 	if (nb == -2147483648)
 	{

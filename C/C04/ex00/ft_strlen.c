@@ -6,20 +6,20 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 12:34:39 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/15 12:34:39 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/18 16:07:06 by ehenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(str[i])
-    {
-        i++;
-    }
-    return(i);
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
 }

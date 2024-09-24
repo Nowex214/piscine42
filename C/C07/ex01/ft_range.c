@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ehenry <ehenry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 17:12:25 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/22 17:20:50 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/23 09:02:46 by ehenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int	*ft_range(int min, int max)
 {
@@ -21,7 +21,6 @@ int	*ft_range(int min, int max)
 
 	if (min >= max)
 		return (0);
-
 	size = max - min;
 	res = (int *)malloc(sizeof(int) * (size));
 	if (res == NULL)
@@ -35,7 +34,7 @@ int	*ft_range(int min, int max)
 	}
 	return (res);
 }
-
+/*
 int	main(void)
 {
 	int	min;
@@ -45,14 +44,14 @@ int	main(void)
 	int	size;
 
 	i = 0;
-	min = 1;
+	min = 5;
 	max = 14;
 	size = max - min;
-	tab = ft_range(min,max);
+	tab = ft_range(min, max);
 	while (size > i)
 	{
 		printf("output: %d\n", tab[i]);
 		i++;
 	}
 }
-
+*/
